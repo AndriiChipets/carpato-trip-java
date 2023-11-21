@@ -33,7 +33,7 @@ public class EventController {
         List<EventDto> events = eventService.findAllEvents();
         String userEmail = SecurityUtil.getSessionUser();
         if (userEmail != null) {
-            userEntityService.findByEmail(userEmail);
+            user = userEntityService.findByEmail(userEmail);
             model.addAttribute("user", user);
         }
         model.addAttribute("user", user);
@@ -47,7 +47,7 @@ public class EventController {
         EventDto eventDto = eventService.findEventById(eventId);
         String userEmail = SecurityUtil.getSessionUser();
         if (userEmail != null) {
-            userEntityService.findByEmail(userEmail);
+            user = userEntityService.findByEmail(userEmail);
             model.addAttribute("user", user);
         }
         model.addAttribute("user", user);

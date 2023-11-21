@@ -20,6 +20,11 @@ public class AuthController {
 
     private final UserEntityService userService;
     
+    @GetMapping("/")
+    public String homePage() {
+        return "index";
+    }
+    
     @GetMapping("/login")
     public String loginPage() {
         return "login";

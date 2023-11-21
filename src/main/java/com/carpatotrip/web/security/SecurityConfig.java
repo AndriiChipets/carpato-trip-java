@@ -29,14 +29,14 @@ public class SecurityConfig {
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.csrf(AbstractHttpConfigurer::disable);
         http.authorizeHttpRequests(auth-> {
-            auth.requestMatchers("/login", "/register/**", "/register", "/clubs", "/css/**", "/js/**")
+            auth.requestMatchers("/", "/login", "/register", "/clubs/**", "/events/**", "/css/**", "/js/**")
                 .permitAll();
             auth.anyRequest().authenticated();
         });
         http.formLogin(form -> form
                 .loginPage("/login")
                 .usernameParameter("email").permitAll()
-                .defaultSuccessUrl("/clubs", true)
+                .defaultSuccessUrl("/", true)
                 .failureUrl("/login?error=true")
                 .loginProcessingUrl("/login"));
         http.logout(logout -> logout

@@ -31,7 +31,7 @@ layout:decorate="~{layout}">
                             <div class="small text-muted" th:text="${club.createdOn}"></div>
                             <h2 class="card-title">About this Travelling Club</h2>
                             <p class="card-text" th:text="${club.content}"></p>
-                            <div th:if="${user.id}==${club.createdBy.id}">></div>
+                            <div th:if="${user.id}==${club.createdBy.id}">
                                 <a class="btn btn-primary" th:href="@{/clubs/{clubId}/delete(clubId=${club.id})}">Delete Travel Club</a>
                                 <a class="btn btn-primary" th:href="@{/events/{clubId}/new(clubId=${club.id})}">Create New Event</a>
                             </div>

@@ -35,7 +35,7 @@ public class TravelClubController {
         List<TravelClubDto> travelClubs = travelClubService.findAllTravelClubs();
         String userEmail = SecurityUtil.getSessionUser();
         if (userEmail != null) {
-            userEntityService.findByEmail(userEmail);
+            user = userEntityService.findByEmail(userEmail);
             model.addAttribute("user", user);
         }
         model.addAttribute("user", user);
@@ -49,7 +49,7 @@ public class TravelClubController {
         TravelClubDto travelClubDto = travelClubService.findTravelClubById(clubId);
         String userEmail = SecurityUtil.getSessionUser();
         if (userEmail != null) {
-            userEntityService.findByEmail(userEmail);
+            user = userEntityService.findByEmail(userEmail);
             model.addAttribute("user", user);
         }
         model.addAttribute("user", user);
