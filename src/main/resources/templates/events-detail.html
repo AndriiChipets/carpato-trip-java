@@ -28,52 +28,22 @@ layout:decorate="~{layout}">
                     <div class="card mb-4">
                         <a href="#!"><img class="card-img-top" th:src="${event.photoUrl}" alt="..."></a>
                         <div class="card-body">
-                            <div class="small text-muted" th:text="${event.createdOn}"></div>
-                            <h2 class="card-title">About this Travelling Event</h2>
+                            <h2 class="card-title">About this Club Event</h2>
+                            <h4 class="card-text">Event type</h4>
                             <p class="card-text" th:text="${event.type}"></p>
+                            <h4 class="card-text">Event start time</h4>
+                            <p class="card-text" th:text="${#temporals.format(event.startTime, 'dd-MM-yyyy HH:mm')}">
+                            </p>
+                            <h4 class="card-text">Event end time</h4>
+                            <p class="card-text" th:text="${#temporals.format(event.endTime, 'dd-MM-yyyy HH:mm')}"></p>
                             <div th:if="${user.id}==${event.travelClub.createdBy.id}">
-                                <a class="btn btn-primary" th:href="@{/events/{eventId}/delete(eventId=${event.id})}">Delete Travel Event</a>
-                            </div>
-                        </div>
-                    </div>
-                        <!-- Side widgets-->
-                        <div class="col-lg-4">
-                            <!-- Search widget-->
-                            <div class="card mb-4">
-                                <div class="card-header">Search</div>
-                                <div class="card-body">
-                                    <div class="input-group">
-                                        <input class="form-control" type="text" placeholder="Enter search term..."
-                                            aria-label="Enter search term..." aria-describedby="button-search" />
-                                        <button class="btn btn-primary" id="button-search" type="button">Go!</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Categories widget-->
-                            <div class="card mb-4">
-                                <div class="card-header">Categories</div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <ul class="list-unstyled mb-0">
-                                                <li><a href="#!">Road Traveller</a></li>
-                                                <li><a href="#!">Trail</a></li>
-                                                <li><a href="#!">Off-Road</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Side widget-->
-                            <div class="card mb-4">
-                                <div class="card-header">Side Widget</div>
-                                <div class="card-body">You can put anything you want inside of these side widgets. They
-                                    are easy
-                                    to use, and feature the Bootstrap 5 card component!</div>
+                                <a class="btn btn-primary"
+                                    th:href="@{/events/{eventId}/delete(eventId=${event.id})}">Delete Travel Event</a>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
     </section>
 </body>
 
