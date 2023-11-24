@@ -37,6 +37,7 @@ layout:decorate="~{layout}">
                             <h4 class="card-text">Event end time</h4>
                             <p class="card-text" th:text="${#temporals.format(event.endTime, 'dd-MM-yyyy HH:mm')}"></p>
                             <div th:if="${user.id}==${event.travelClub.createdBy.id}">
+                                <br>
                                 <a class="btn btn-primary"
                                     th:href="@{/events/{eventId}/delete(eventId=${event.id})}">Delete Travel Event</a>
                             </div>

@@ -9,6 +9,4 @@ public interface UserEntityService {
 
     UserEntity findByEmail(String email);
 
-    UserEntity findByLastName(String lastName);
-
 }

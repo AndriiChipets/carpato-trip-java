@@ -45,9 +45,4 @@ public class UserEntityServiceImpl implements UserEntityService {
         return userEntityRepository.findByEmail(email);
     }
 
-    @Override
-    public UserEntity findByLastName(String lastName) {
-        return userEntityRepository.findByLastName(lastName);
-    }
-
 }

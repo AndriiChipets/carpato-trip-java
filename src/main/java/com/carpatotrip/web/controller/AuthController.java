@@ -46,10 +46,6 @@ public class AuthController {
         if (existingUser != null && existingUser.getEmail() != null && !existingUser.getEmail().isEmpty()) {
             return "redirect/register?fail";
         }
-        existingUser = userService.findByLastName(user.getLastName());
-        if (existingUser != null && existingUser.getLastName() != null && !existingUser.getLastName().isEmpty()) {
-            return "redirect/register?fail";
-        }
         if (result.hasErrors()) {
             model.addAttribute("user", user);
             return "register";

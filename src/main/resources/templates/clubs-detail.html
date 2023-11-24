@@ -36,6 +36,7 @@ layout:decorate="~{layout}">
                             <div th:if="${user.id}==${club.createdBy.id}">
                                 <a class="btn btn-primary" th:href="@{/clubs/{clubId}/delete(clubId=${club.id})}">Delete
                                     Travel Club</a>
+                                    <br>
                                 <a class="btn btn-primary" th:href="@{/events/{clubId}/new(clubId=${club.id})}">Create
                                     New Event</a>
                             </div>

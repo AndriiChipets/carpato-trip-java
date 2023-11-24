@@ -22,6 +22,7 @@ layout:decorate="~{layout}">
                         </div>
                         <a th:href="@{/events/{eventId}(eventId=${event.id})}" class="btn btn-primary">View Event</a>
                         <div th:if="${user.id}==${event.travelClub.createdBy.id}">
+                            <br>
                             <a th:href="@{/events/{eventId}/edit(eventId=${event.id})}" class="btn btn-primary">Edit Event</a>
                         </div>
                     </div>
