@@ -4,6 +4,8 @@ xlmns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 layout:decorate="~{layout}">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Register</title>
 </head>
 
@@ -68,8 +70,8 @@ layout:decorate="~{layout}">
                                 placeholder="Password"
                                 name="password">
                             </div>
-                            <button th:href="@{/register}" type="submit" class="btn btn-black">Don't have an account already? Register Here.</button>
-                            <button type="submit" value="Log in" class="btn btn-secondary">Login</button>
+                            <a th:href="@{/register}" class="btn btn-black">Don't have an account already? Register Here.</a>
+                            <button type="submit" value="Log in" class="btn btn-secondary m-2">Login</button>
                         </form>
                     </div>
                 </div>

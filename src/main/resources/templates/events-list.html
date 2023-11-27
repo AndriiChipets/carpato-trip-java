@@ -14,16 +14,15 @@ layout:decorate="~{layout}">
                     <p class="lead fw-normal text-muted mb-0">Events found in your area!</p>
                 </div>
                 <div class="row gx-5">
-                    <div th:each="event: ${events}" class="col-lg-6 mb-2">
-                        <div class="position-relative mb-3">
-                            <img class="img-fluid rounded-3 mb-3" th:src="${event.photoUrl}" alt="..." />
-                            <a th:text="${event.name}"
-                                class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Event name</a>
-                        </div>
-                        <a th:href="@{/events/{eventId}(eventId=${event.id})}" class="btn btn-primary">View Event</a>
-                        <div th:if="${user.id}==${event.travelClub.createdBy.id}">
-                            <br>
-                            <a th:href="@{/events/{eventId}/edit(eventId=${event.id})}" class="btn btn-primary">Edit Event</a>
+                    <div th:each="event: ${events}" class="col-lg-6 my-3 d-flex align-items-center">
+                        <div class="position-relative mb-3" >
+                            <img th:href="@{/events/{eventId}(eventId=${event.id})}"
+                            th:src="${event.photoUrl}"
+                            th:alt="${event.name}"
+                            class="img-fluid rounded-3 mb-3"/>
+                            <a th:href="@{/events/{eventId}(eventId=${event.id})}" 
+                               th:text="${event.name}" 
+                               class="h3 fw-bolder text-decoration-none link-dark stretched-link">Event name</a>
                         </div>
                     </div>
                 </div>
