@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS carpato_trip_schema.users_roles CASCADE;
 -- SCHEMA: carpato_trip_schema
 DROP SCHEMA IF EXISTS carpato_trip_schema; 
 CREATE SCHEMA IF NOT EXISTS carpato_trip_schema
-AUTHORIZATION yymuukyvamvfdj;
+AUTHORIZATION carpato_trip_user;
 
 -- TABLE: clubs
 CREATE TABLE IF NOT EXISTS carpato_trip_schema.clubs (
@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS carpato_trip_schema.clubs (
 );
 --TABLESPACE pg_default;
 ALTER TABLE IF EXISTS carpato_trip_schema.clubs
-    OWNER to yymuukyvamvfdj;
+    OWNER to carpato_trip_user;
 
 -- TABLE: events
 CREATE TABLE IF NOT EXISTS carpato_trip_schema.events (
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS carpato_trip_schema.events (
 );
 --TABLESPACE pg_default;
 ALTER TABLE IF EXISTS carpato_trip_schema.events
-    OWNER to yymuukyvamvfdj;
+    OWNER to carpato_trip_user;
     
 --TABLE: roles
 CREATE TABLE IF NOT EXISTS carpato_trip_schema.roles (
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS carpato_trip_schema.roles (
 );
 --TABLESPACE pg_default;
 ALTER TABLE IF EXISTS carpato_trip_schema.roles
-    OWNER to yymuukyvamvfdj;
+    OWNER to carpato_trip_user;
 
 -- TABLE: users
 CREATE TABLE IF NOT EXISTS carpato_trip_schema.users (
@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS carpato_trip_schema.users (
 );
 --TABLESPACE pg_default;
 ALTER TABLE IF EXISTS carpato_trip_schema.users
-    OWNER to yymuukyvamvfdj;
+    OWNER to carpato_trip_user;
     
 -- TABLE: users_roles - this is a table for implementation MANY TO MANY relationship
 CREATE TABLE IF NOT EXISTS carpato_trip_schema.users_roles (
@@ -74,4 +74,4 @@ CREATE TABLE IF NOT EXISTS carpato_trip_schema.users_roles (
 );
 --TABLESPACE pg_default;
 ALTER TABLE IF EXISTS carpato_trip_schema.users_roles
-    OWNER to yymuukyvamvfdj;
+    OWNER to carpato_trip_user;
