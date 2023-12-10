@@ -12,7 +12,7 @@ xlmns:sec="http://www.thymeleaf.org"
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link th:href="@{/css/styles.css}" rel="stylesheet" />
+    <link th:href="@{/css/msin.min.css}" rel="stylesheet" />
     <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">TravelClub</title>
 </head>
 
@@ -26,15 +26,15 @@ xlmns:sec="http://www.thymeleaf.org"
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link" th:href="@{/}">Home</a></li>
                 <li class="nav-item"><a class="nav-link" th:href="@{/clubs}">Find Clubs</a></li>
-                <li class="nav-item"><a class="nav-link" th:href="@{/events}">Find Events</a></li>
-                <li sec:authorize="!isAuthenticated()" class="nav-item"><a class="nav-link me-3 btn btn-primary"
+                <li class="nav-item"><a class="nav-link me-5" th:href="@{/events}">Find Events</a></li>
+                <li sec:authorize="!isAuthenticated()" class="nav-item"><a class="nav-link"
                         th:href="@{/login}">Login</a></li>
-                <li sec:authorize="!isAuthenticated()" class="nav-item"><a class="nav-link btn btn-primary"
+                <li sec:authorize="!isAuthenticated()" class="nav-item"><a class="nav-link"
                         th:href="@{/register}">Register</a></li>
                 <li sec:authorize="isAuthenticated()" class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">Welcome</a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+                    <ul class="dropdown-menu dropdown-menu-end bg-light" aria-labelledby="navbarDropdownPortfolio">
                         <li><a class="dropdown-item" th:href="@{/clubs/new}">Create Travel Club</a></li>
                         <li><a class="dropdown-item" th:href="@{/logout}">Logout</a></li>
                     </ul>
@@ -45,7 +45,6 @@ xlmns:sec="http://www.thymeleaf.org"
 </nav>
 
 <body layout:fragment="body"></body>
-</main>
 <!-- Footer-->
 <footer class="bg-dark py-4 mt-auto">
     <div class="container px-5">
@@ -58,7 +57,4 @@ xlmns:sec="http://www.thymeleaf.org"
 </footer>
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
-<script src="js/scripts.js"></script>
-
 </html>

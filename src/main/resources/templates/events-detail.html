@@ -9,9 +9,9 @@ layout:decorate="~{layout}">
 
 <body class="d-flex flex-column">
     <!-- Page Content-->
-    <section layout:fragment="body">
+    <section layout:fragment="body" class="min-vh-100 bg-pinklight">
         <!-- Page header with logo and tagline-->
-        <header class="py-5 bg-light border-bottom mb-4">
+        <header class="py-5 bg-pinkdark border-bottom mb-4">
             <div class="container">
                 <div class="text-center my-5">
                     <h1 class="fw-bolder" th:text="${event.name}"></h1>
@@ -27,7 +27,7 @@ layout:decorate="~{layout}">
                     <!-- Featured blog post-->
                     <div class="card mb-4">
                         <a href="#!"><img class="card-img-top" th:src="${event.photoUrl}" alt="..."></a>
-                        <div class="card-body">
+                        <div class="card-body bg-light">
                             <h2 class="card-title">About this Club Event</h2>
                             <h4 class="card-text">Event type</h4>
                             <p class="card-text" th:text="${event.type}"></p>
@@ -44,6 +44,7 @@ layout:decorate="~{layout}">
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 </body>
 

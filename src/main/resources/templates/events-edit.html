@@ -10,7 +10,7 @@ layout:decorate="~{layout}">
 <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
         <!-- Page Content-->
-        <section layout:fragment="body" class="py-5">
+        <section layout:fragment="body" class="min-vh-100 py-5 bg-pinklight">
             <div class="container">
                 <form role="form" method="post" th:action="@{/events/{eventId}/edit(eventId=${eventId})}" th:object="${event}">
                     <div class="form-row">
@@ -18,7 +18,7 @@ layout:decorate="~{layout}">
                             <label for="name">Name</label>
                             <input 
                             type="text" 
-                            class="form-control" 
+                            class="form-control bg-light" 
                             id="name"
                             name="name"
                             th:field="*{name}"
@@ -29,7 +29,7 @@ layout:decorate="~{layout}">
                             <label for="type">Type</label>
                             <input 
                             type="text" 
-                            class="form-control" 
+                            class="form-control bg-light" 
                             id="type"
                             name="type"
                             th:field="*{type}"
@@ -40,7 +40,7 @@ layout:decorate="~{layout}">
                             <label for="photoUrl">Photo Url</label>
                             <input 
                             type="text" 
-                            class="form-control" 
+                            class="form-control bg-light" 
                             id="photoUrl"
                             name="photoUrl"
                             th:field="*{photoUrl}"
@@ -51,7 +51,7 @@ layout:decorate="~{layout}">
                             <label for="startTime">Start Time</label>
                             <input 
                             type="datetime-local" 
-                            class="form-control" 
+                            class="form-control bg-light" 
                             id="startTime"
                             name="startTime"
                             th:field="*{startTime}"
@@ -62,7 +62,7 @@ layout:decorate="~{layout}">
                         <label for="endTime">End Time</label>
                             <input 
                             type="datetime-local" 
-                            class="form-control" 
+                            class="form-control bg-light" 
                             id="endTime"
                             name="endTime"
                             th:field="*{endTime}"

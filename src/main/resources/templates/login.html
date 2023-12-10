@@ -10,10 +10,10 @@ layout:decorate="~{layout}">
 </head>
 
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 bg-pinklight">
     <main class="flex-shrink-0">
         <!-- Page Content-->
-        <section layout:fragment="body" class="py-5">
+        <section layout:fragment="body" class="min-vh-100 py-5 bg-pinklight">
             <style>
                 .main {
                     padding: 0px 10px;
@@ -57,7 +57,7 @@ layout:decorate="~{layout}">
                                 <input 
                                 id="email"
                                 type="email" 
-                                class="form-control" 
+                                class="form-control bg-light" 
                                 placeholder="Email"
                                 name="email">
                             </div>
@@ -66,7 +66,7 @@ layout:decorate="~{layout}">
                                 <input 
                                 id = "password"
                                 type="password" 
-                                class="form-control" 
+                                class="form-control bg-light" 
                                 placeholder="Password"
                                 name="password">
                             </div>

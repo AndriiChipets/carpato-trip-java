@@ -4,7 +4,7 @@ xlmns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 layout:decorate="~{layout}">
 <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
-        <section layout:fragment="body" class="py-5">
+        <section layout:fragment="body" class="min-vh-100 py-5 bg-pinklight">
             <div class="container px-5 my-5">
                 <div th:if="${param.success}" class="alert alert-success">
                     You are registered successfully!
@@ -18,9 +18,9 @@ layout:decorate="~{layout}">
                         <form th:action="@{/clubs/search}" class="form-inline my-2 my-lg-0 mb-3">
                             <input
                              name="query"
-                             class="form-control mr-sm-2 mb-5"
+                             class="form-control mr-sm-2 mb-5 bg-light"
                              type="search"
-                             placeholder="Search Travelling Clubs"
+                             placeholder="Search Clubs"
                              area-label="Search">
                         </form>
                     </div>
@@ -30,6 +30,7 @@ layout:decorate="~{layout}">
                                 th:src="${club.photoUrl}"
                                 th:alt="${club.title}"
                                 class="img-fluid rounded-3 mb-3"  />
+                                <br>
                             <a th:href="@{/clubs/{clubId}(clubId=${club.id})}"
                                th:text="${club.title}" 
                                class="h3 fw-bolder text-decoration-none link-dark stretched-link" href="#!">Travel Club Name</a>

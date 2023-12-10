@@ -7,7 +7,7 @@ layout:decorate="~{layout}">
 </head>
 <body class="d-flex flex-column h-100">
     <main class="flex-shrink-0">
-        <section layout:fragment="body" class="py-5">
+        <section layout:fragment="body" class="min-vh-100 py-5 bg-pinklight">
             <div class="container px-5 my-5">
                 <div class="text-center mb-5">
                     <h1 class="fw-bolder">Find Travel Events</h1>
@@ -20,6 +20,7 @@ layout:decorate="~{layout}">
                             th:src="${event.photoUrl}"
                             th:alt="${event.name}"
                             class="img-fluid rounded-3 mb-3"/>
+                            <br>
                             <a th:href="@{/events/{eventId}(eventId=${event.id})}" 
                                th:text="${event.name}" 
                                class="h3 fw-bolder text-decoration-none link-dark stretched-link">Event name</a>

@@ -10,10 +10,10 @@ layout:decorate="~{layout}">
 </head>
 
 
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 bg-pinklight">
     <main class="flex-shrink-0">
         <!-- Page Content-->
-        <section layout:fragment="body" class="py-5">
+        <section layout:fragment="body" class="min-vh-100 py-5 bg-pinklight">
             <style>
                 .main {
                     padding: 0px 10px;
@@ -54,7 +54,7 @@ layout:decorate="~{layout}">
                                 <label>First Name</label>
                                 <input 
                                 type="text" 
-                                class="form-control" 
+                                class="form-control bg-light" 
                                 firstName="firstName"
                                 placeholder="First Name"
                                 th:field="*{firstName}">
@@ -64,7 +64,7 @@ layout:decorate="~{layout}">
                                 <label>Last Name</label>
                                 <input 
                                 type="text" 
-                                class="form-control" 
+                                class="form-control bg-light" 
                                 firstName="lastName"
                                 placeholder="Last Name"
                                 th:field="*{lastName}">
@@ -73,7 +73,7 @@ layout:decorate="~{layout}">
                             <div class="form-group">
                                 <label>Email</label>
                                 <input type="email" 
-                                class="form-control" 
+                                class="form-control bg-light" 
                                 placeholder="Email" 
                                 th:field="*{email}">
                             </div>
@@ -82,7 +82,7 @@ layout:decorate="~{layout}">
                                 <label>Password</label>
                                 <input 
                                 type="password" 
-                                class="form-control" 
+                                class="form-control bg-light" 
                                 placeholder="Password"
                                 th:field="*{password}">
                             </div>

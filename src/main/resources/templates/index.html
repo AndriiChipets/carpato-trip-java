@@ -1,20 +1,17 @@
-<html 
-xmlns:th="http://www.thymeleaf.org" 
+<html xmlns:th="http://www.thymeleaf.org" 
 xlmns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-layout:decorate="~{layout}">
-
+layout:decorate="~{layout}">> 
 <head>
     <title>Home page</title>
 </head>
 
 <body class="d-flex flex-column h-100">
-    <main class="flex-shrink-0">
-        <section layout:fragment="body" class="py-5">
+        <section layout:fragment="body" class="min-vh-100 py-5 bg-pinklight">
             <div class="container px-5 my-5">
-                <h1>Hello in Travel Clubs web site</h1>
+                <h1>Hello from Travel Clubs website</h1>
+                <!-- <img th:src="@{../static/assets/LOGO2.png}" alt="..."> -->
             </div>
         </section>
-    </main>
 </body>
 
 </html>
