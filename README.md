@@ -19,5 +19,5 @@ This website is hosted on a free server and if it’s not openedinstantly please
 - Bootstrap
 - Lombok
 
-  ![image](https://github.com/AndriiChipets/carpato-trip-java/assets/137887124/e8c9437f-91fa-4e97-82ca-03ed6206e9e4)
+![image](https://github.com/AndriiChipets/carpato-trip-java/assets/137887124/f4eec2ae-25cf-48d8-80b7-5326ea6e4b52)
 ![image](https://github.com/AndriiChipets/carpato-trip-java/assets/137887124/d84c0db8-bbdf-44e2-b542-6f343abb56e5)
